@@ -1,0 +1,56 @@
+/* Cơ bản */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+/* Form và lựa chọn */
+select, button {
+    font-size: 0.875rem;
+    margin-bottom: 10px;
+}
+
+form .form-row {
+    margin-bottom: 15px;
+}
+
+/* Bảng thống kê */
+.table {
+    font-size: 0.875rem;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 6px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Tiêu đề và biểu đồ */
+h3, h4 {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+canvas {
+    width: 100% !important;
+    height: 250px !important;
+}

@@ -1,0 +1,250 @@
+/* Thay đổi cấu trúc tổng thể */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f4f6f9;
+    overflow: hidden; /* Đảm bảo không có thanh cuộn ngoài ý muốn */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: fixed; /* Sidebar cố định */
+}
+
+/* Header của sidebar */
+.sidebar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.sidebar h1 {
+    color: white;
+    margin-top: 10px;
+}
+
+.sidebar .nav-item {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sidebar .nav-item:hover {
+    background-color: #495057;
+}
+
+.sidebar .nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar .logout-btn {
+    margin-top: auto;
+    background-color: #dc3545;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.sidebar .logout-btn:hover {
+    background-color: #c82333;
+}
+
+/* Nội dung chính */
+.container {
+    margin-left: 220px; /* Để tránh bị chồng lên sidebar */
+    padding: 20px;
+    width: calc(100% - 220px);
+    overflow-y: auto; /* Cho phép cuộn khi nội dung dài */
+    height: 100vh; /* Chiếm hết chiều cao của trang */
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+}
+
+/* Tiêu đề */
+h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Định dạng form */
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Form Group */
+.form-group label {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Cải thiện select và input */
+.form-control {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    padding: 8px;
+    font-size: 0.9rem;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Cải tiến button */
+.btn {
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+.btn-info, .btn-success, .btn-primary, .btn-danger {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+/* Button khác biệt khi hover */
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Cải tiến các phần liên quan đến sản phẩm */
+.selected-product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 8px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.selected-product-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.selected-product-item .product-info {
+    flex-grow: 1;
+}
+
+.selected-product-item .product-info span {
+    display: block;
+    font-size: 0.85rem;
+    color: #333;
+}
+
+.selected-product-item .product-info strong {
+    font-size: 1rem;
+    color: #007bff;
+}
+
+.selected-product-item button {
+    padding: 4px 8px;
+}
+
+/* Cải tiến hiển thị tổng tiền */
+#total-amount, #final-amount {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Giảm giá thông báo */
+#discount-message {
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+/* Chỉnh giao diện cho các phần nhỏ như ô nhập mã giảm giá */
+.input-group {
+    margin-bottom: 10px;
+}
+
+/* Chỉnh sửa hiển thị sản phẩm chọn */
+#selected-products h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Cải tiến khoảng cách giữa các phần */
+.d-flex {
+    margin-bottom: 12px;
+}
+
+/* Cải tiến nút tạo khách hàng mới */
+button.btn-info {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    margin-left: 8px;
+}
+
+button.btn-info:hover {
+    background-color: #0056b3;
+}
+
+/* Tăng cường tương tác người dùng với hover */
+.form-control:hover, .btn:hover {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Cải tiến tổng thể của giao diện nhỏ gọn */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .selected-product-item {
+        padding: 6px;
+    }
+
+    .selected-product-item img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .selected-product-item button {
+        padding: 4px 8px;
+    }
+}
